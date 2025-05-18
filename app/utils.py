@@ -9,7 +9,7 @@ import streamlit as st
 def load_data(countries):
     df_list = []
     for country in countries:
-        path = f"data/{country.lower().replace(' ', '_')}_clean.csv"
+        path = f"src/notebooks/data/{country.lower().replace(' ', '_')}_clean.csv"
         try:
             df = pd.read_csv(path, parse_dates=["Timestamp"])
             df["Country"] = country
